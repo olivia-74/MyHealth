@@ -8,7 +8,6 @@ import iconePerfil from "../../Assets/fotoPerfilDefault.png"
 import iconeMenu from "../../Assets/iconeMenu.png"
 import {Menu, MenuButton, MenuList, MenuItem, MenuDivider, IconButton} from '@chakra-ui/react'
 import { useNavigate } from "react-router"
-import { useEffect } from "react"
 
 
 function Header (){
@@ -20,13 +19,14 @@ function Header (){
         navigate('/')
     }
 
-    useEffect(() => {
-        const token =localStorage.getItem('token')
-        if(!token){
-            navigate('/')
-        }
-    }, [navigate])
 
+    const goToHome = () => {
+        navigate('/home')
+    }
+
+    const goToLoading = () => {
+        navigate('*')
+    }
 
     return(
         <>
@@ -34,23 +34,23 @@ function Header (){
             <img src={logoHeader} alt="logo" />
             
                 <Nav>
-                    <BotaoNav className="icones"><img src={iconeHome} alt="home"/></BotaoNav>
-                    <BotaoNav className="icones"><img src={iconeAcFisico} alt="acompanhamento fisico"/></BotaoNav>
-                    <BotaoNav className="icones"><img src={iconeAcNutricional} alt="acompanhamento nutricional"/></BotaoNav>
-                    <BotaoNav className="icones"><img src={iconeInformacoes} alt="informacoes"/></BotaoNav>
-                    <BotaoNav className="perfil"><img src={iconePerfil} alt="perfil"/></BotaoNav>
+                    <BotaoNav className="icones" onClick={goToHome}><img src={iconeHome} alt="home"/></BotaoNav>
+                    <BotaoNav className="icones" onClick={goToLoading}><img src={iconeAcFisico} alt="acompanhamento fisico"/></BotaoNav>
+                    <BotaoNav className="icones" onClick={goToLoading}><img src={iconeAcNutricional} alt="acompanhamento nutricional"/></BotaoNav>
+                    <BotaoNav className="icones" onClick={goToLoading}><img src={iconeInformacoes} alt="informacoes"/></BotaoNav>
+                    <BotaoNav className="perfil" onClick={goToLoading}><img src={iconePerfil} alt="perfil"/></BotaoNav>
 
                     <Menu> 
                         <BotaoNav><MenuButton aria-label='Options'as={IconButton} colorScheme='transparent' icon={<img src={iconeMenu} alt="menu"/>}/></BotaoNav>
                         <MenuList>
-                            <MenuItem> Acessar Home </MenuItem>
-                            <MenuItem> Acessar acompanhamento fisico </MenuItem>
-                            <MenuItem> Acessar acompanhamento nutricional </MenuItem> 
-                            <MenuItem> Acessar suas informacoes </MenuItem> 
-                            <MenuItem> Acessar seu perfil </MenuItem> 
+                            <MenuItem onClick={goToHome}> Acessar Home </MenuItem>
+                            <MenuItem onClick={goToLoading}> Acessar acompanhamento fisico </MenuItem>
+                            <MenuItem onClick={goToLoading}> Acessar acompanhamento nutricional </MenuItem> 
+                            <MenuItem onClick={goToLoading}> Acessar suas informacoes </MenuItem> 
+                            <MenuItem onClick={goToLoading}> Acessar seu perfil </MenuItem> 
                             <MenuDivider/>
-                            <MenuItem> Minha conta </MenuItem>
-                            <MenuItem onClick={handleLogout}> Sair  </MenuItem>
+                            <MenuItem onClick={goToLoading}> Minha conta </MenuItem>
+                            <MenuItem onClick={handleLogout}> Sair</MenuItem>
                         </MenuList>
                     </Menu>
                 </Nav>

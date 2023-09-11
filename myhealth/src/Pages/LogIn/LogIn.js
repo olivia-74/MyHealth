@@ -6,17 +6,23 @@ import { useState } from "react";
 import axios from "axios"
 import { useNavigate } from "react-router";
 
+
+
 function LogIn (){
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
 
     const navigate = useNavigate()
+
+   
+
+
     const goToHome = () => {
-        navigate('Home')
+        navigate('/home')
     }
     const goToSignIn = () => {
-        navigate('SignIn')
+        navigate('/signin')
     }
 
     const handleSubmit = (e) => {
@@ -54,7 +60,7 @@ function LogIn (){
         <BotaoCadastro onClick={goToSignIn}>Cadastre-se aqui!</BotaoCadastro>
 
         <Card>
-            <form onSubmit={handleSubmit}>
+            <form >
 
                 <h1>Entrar</h1>
 
@@ -64,7 +70,7 @@ function LogIn (){
                 <label> Senha </label>
                 <input placeholder="" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
 
-                <button type="submit">Entrar</button>
+                <button type="submit" onClick={handleSubmit}>Entrar</button>
             </form>
         </Card>
 

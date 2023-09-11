@@ -10,6 +10,7 @@ import AN from "../../Assets/iconeNutricao.png"
 import AF from "../../Assets/iconeAcompanhamentoFisico.png"
 import Informacoes from "../../Assets/iconeInformacoesMedicas.png"
 import { useNavigate } from "react-router";
+import { useEffect } from "react"
 
 
 
@@ -43,21 +44,29 @@ function LandingPage(){
 
     const navigate = useNavigate()
     const goToLogIn = () => {
-        navigate('LogIn')
+        navigate('login')
     }
-    
+    useEffect(() => {
+        const token =localStorage.getItem('token')
+        if(!token){
+            navigate('/')
+        }
+    }, [navigate])
 
+    const goToSignIn = () => {
+        navigate('/signin')
+    }
 
     return(
         <>
         <HeaderLanding>
             <LogoHeader src={logoHeader}/>
-            <BotaoHeader onClick={goToLogIn}>Entrar</BotaoHeader>
+            <BotaoHeader onClick={goToSignIn}>Criar conta</BotaoHeader>
         </HeaderLanding>
 
         <Div>
             <Imagem src={imagemFundo}/>
-            <BotaoLanding>Entrar</BotaoLanding>
+            <BotaoLanding onClick={goToLogIn}>Entrar</BotaoLanding>
         </Div>
 
         <Div className="Segunda">

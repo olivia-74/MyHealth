@@ -3,14 +3,18 @@ import logoHeader from "../../Assets/logoVerde.jpg"
 import imagem from "../../Assets/imgSignin.jpg"
 import logoFooter from "../../Assets/logoSimplesBranco.png"
 import { useNavigate } from "react-router";
+import React from 'react';
+
 
 
 function SignIn (){
 
     const navigate = useNavigate()
     const goToHome = () => {
-        navigate('Home')
+        navigate('/home')
     }
+
+    
     return(
         <>
         <Header>

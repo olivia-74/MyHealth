@@ -4,19 +4,24 @@ import { SecoesHome, ContainerButton, MensagemDefault, DiarioNutricional } from 
 import iconeAcFisico from "../../Assets/iconeAFpreto.png"
 import Compartilhar from "../../Components/BotaoCompartilhar/Compartilhar"
 import iconeAcNutricional from "../../Assets/iconeANpreto.png"
+import iconeInformacoes from "../../Assets/iconeInfoPreto.png"
 import { useNavigate } from "react-router"
 
 
 function Home(){
 
-   
+    const navigate = useNavigate()
+    const goToAcFisico = () => {
+        navigate('/acompanhamentofisico')
+    }
+
 
     return(
        <>
         <Header/>
 
         <ContainerButton>
-            <button className="icone"> <img src={iconeAcFisico} alt="acompanhamento fisico"/></button>
+            <button className="icone" onClick={goToAcFisico}> <img src={iconeAcFisico} alt="acompanhamento fisico"/></button>
             <button className="compartilhar"><Compartilhar/></button>
         </ContainerButton>
         <SecoesHome>
@@ -30,15 +35,17 @@ function Home(){
         </SecoesHome>  
 
         <ContainerButton>
-            <button className="icone"> <img src={iconeAcNutricional} alt="acompanhamento fisico"/></button>
+            <button className="icone" > <img src={iconeAcNutricional} alt="acompanhamento nutricional"/></button>
             <button className="compartilhar"><Compartilhar/></button>
         </ContainerButton>    
         <SecoesHome>
-            <h2> diario nutricional</h2>
-            <DiarioNutricional>
-                
-            </DiarioNutricional>
-           
+        </SecoesHome>  
+
+        <ContainerButton>
+            <button className="icone"> <img src={iconeInformacoes} alt="minhas informacoes"/></button>
+            <button className="compartilhar"><Compartilhar/></button>
+        </ContainerButton>    
+        <SecoesHome>
         </SecoesHome>  
             
         

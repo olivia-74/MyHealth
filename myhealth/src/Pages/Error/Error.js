@@ -1,10 +1,17 @@
 import Loading from "../../Assets/loadingGif.gif"
+import Footer from "../../Components/Footer/Footer"
+import Header from "../../Components/Header/Header"
+import { PaginaErro } from "./styledError"
 
 function Error (){
     return(
         <>
-        <img src={Loading} alt="loading..." />
-        <p>erro!</p>
+        <Header/>
+        <PaginaErro>
+          <img src={Loading} alt="loading..." />
+            {/* <p>erro!</p>   */}
+        </PaginaErro>
+        <Footer/>
         </>
         
     )

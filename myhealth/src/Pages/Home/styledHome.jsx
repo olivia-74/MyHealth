@@ -25,14 +25,15 @@ export const SecoesHome = styled.div`
 export const MensagemDefault = styled.div`
     background-color: transparent;
     justify-content: center;
-    margin-left: 25%;
+    margin-left: 18%;
     padding: 3rem;
     
     h3{
         display: flex;
-        width: 45vw;
+        width: 55vw;
         flex-wrap: wrap;
         text-align: center;
+        justify-content: center;
         font-weight: bold;
         font-size: 30px;
         background-color: transparent;  
@@ -53,7 +54,7 @@ export const MensagemDefault = styled.div`
             background-image: url(${Adicionar});
             background-size: contain;
             background-repeat: no-repeat;
-            margin-left: 19.5vw;
+            margin-left: 23vw;
         }
         p{
             border-radius: 10px;
@@ -64,7 +65,7 @@ export const MensagemDefault = styled.div`
             margin-top: 3vh;
             width: 15vw;
             font-size: 22px;
-            margin-left: 15vw
+            margin-left: 19vw
         }
     }
     

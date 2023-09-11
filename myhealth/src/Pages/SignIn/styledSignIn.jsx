@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const CorFundo = styled.div`
-        margin: 0;
-        padding: 0;
-        outline: 0;
-        background-color: #ffffff;
-`
 
 export const Header = styled.header`
     height: 10vh;
@@ -23,8 +17,8 @@ export const Header = styled.header`
 export const Imagem = styled.img`
     display: flex;
     float: right;
-    height: 90vh;
-    margin-right: 10vw;
+    height: 80vh;
+    margin-right:5vw;
 `
 
 export const Card = styled.div`
@@ -99,7 +93,6 @@ export const Footer = styled.footer`
     height: 5vh;
     width: 100%;
     justify-content: center;
-    position: fixed; 
     bottom: 0px; 
     display: flex;
     padding: 2px;

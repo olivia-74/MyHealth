@@ -1,10 +1,11 @@
-import LandingPage from "./Pages/LandingPage/LandingPage"
+// import LandingPage from "./Pages/LandingPage/LandingPage"
 import { ChakraProvider } from '@chakra-ui/react'
 import GlobalStyle from "./styledGlobal";
-import Home from "./Pages/Home/Home";
-import LogIn from "./Pages/LogIn/LogIn";
-import Routes from "./Rotas/Rotas";
-import SignIn from "./Pages/SignIn/SignIn";
+// import Home from "./Pages/Home/Home";
+// import LogIn from "./Pages/LogIn/LogIn";
+
+import Rotas from "./Rotas/Rotas"
+// import SignIn from "./Pages/SignIn/SignIn";
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
       {/* <LandingPage/> */}
       {/* <Home/> */}
       {/* <LogIn/> */}
-      {/* <Routes/> */}
-      <SignIn/>
+      <Rotas/>
+      
 
     </ChakraProvider>
     
