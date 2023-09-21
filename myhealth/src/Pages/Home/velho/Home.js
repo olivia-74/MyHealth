@@ -1,6 +1,6 @@
 import Header from "../../Components/Header/Header"
 import Footer from "../../Components/Footer/Footer"
-import { SecoesHome, ContainerButton, MensagemDefault, DiarioNutricional, ContainerHome, Conteudo } from "./styledHome"
+import { SecoesHome, ContainerButton, MensagemDefault, DiarioNutricional } from "./styledHome"
 import iconeAcFisico from "../../Assets/iconeAFpreto.png"
 import Compartilhar from "../../Components/BotaoCompartilhar/Compartilhar"
 import iconeAcNutricional from "../../Assets/iconeANpreto.png"
@@ -20,12 +20,10 @@ function Home(){
        <>
         <Header/>
 
-        <ContainerHome>
+        <ContainerButton>
             <button className="icone" onClick={goToAcFisico}> <img src={iconeAcFisico} alt="acompanhamento fisico"/></button>
             <button className="compartilhar"><Compartilhar/></button>
-
-            
-        </ContainerHome>
+        </ContainerButton>
         <SecoesHome>
             <MensagemDefault>
                 <h3>SEM TREINOS REGISTRADOS: compartilhe essa secao com seu treinador ou insira sua rotina de treinos voce mesmo</h3>
