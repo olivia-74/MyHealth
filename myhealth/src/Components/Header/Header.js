@@ -28,6 +28,12 @@ function Header (){
         navigate('*')
     }
 
+    const goToAcompanhamentoFisico = () => {
+        navigate('acompanhamentofisico')
+    }
+
+
+
     return(
         <>
         <ContainerHeader>
@@ -35,7 +41,7 @@ function Header (){
             
                 <Nav>
                     <BotaoNav className="icones" onClick={goToHome}><img src={iconeHome} alt="home"/></BotaoNav>
-                    <BotaoNav className="icones" onClick={goToLoading}><img src={iconeAcFisico} alt="acompanhamento fisico"/></BotaoNav>
+                    <BotaoNav className="icones" onClick={goToAcompanhamentoFisico}><img src={iconeAcFisico} alt="acompanhamento fisico"/></BotaoNav>
                     <BotaoNav className="icones" onClick={goToLoading}><img src={iconeAcNutricional} alt="acompanhamento nutricional"/></BotaoNav>
                     <BotaoNav className="icones" onClick={goToLoading}><img src={iconeInformacoes} alt="informacoes"/></BotaoNav>
                     <BotaoNav className="perfil" onClick={goToLoading}><img src={iconePerfil} alt="perfil"/></BotaoNav>
@@ -44,7 +50,7 @@ function Header (){
                         <BotaoNav><MenuButton aria-label='Options'as={IconButton} colorScheme='transparent' icon={<img src={iconeMenu} alt="menu"/>}/></BotaoNav>
                         <MenuList>
                             <MenuItem onClick={goToHome}> Acessar Home </MenuItem>
-                            <MenuItem onClick={goToLoading}> Acessar acompanhamento fisico </MenuItem>
+                            <MenuItem onClick={goToAcompanhamentoFisico}> Acessar acompanhamento fisico </MenuItem>
                             <MenuItem onClick={goToLoading}> Acessar acompanhamento nutricional </MenuItem> 
                             <MenuItem onClick={goToLoading}> Acessar suas informacoes </MenuItem> 
                             <MenuItem onClick={goToLoading}> Acessar seu perfil </MenuItem> 

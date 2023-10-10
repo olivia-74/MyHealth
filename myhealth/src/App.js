@@ -4,7 +4,7 @@ import GlobalStyle from "./styledGlobal";
 // import Home from "./Pages/Home/Home";
 // import LogIn from "./Pages/LogIn/LogIn";
 
-import Rotas from "./Rotas/Rotas"
+import Rotas from "./Routes/Rotas"
 // import SignIn from "./Pages/SignIn/SignIn";
 
 function App() {

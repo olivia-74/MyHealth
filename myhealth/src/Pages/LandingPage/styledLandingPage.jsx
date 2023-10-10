@@ -29,7 +29,7 @@ export const ConteudoDiv = styled.div`
     &.Texto{
         color: white;
         text-align: justify;
-        font-size: 30px;
+        font-size: 25px;
         padding: 3vh 6vw 0vh 6vw;
         background-color: transparent;
     }
@@ -89,7 +89,7 @@ export const BotaoLanding = styled.button`
 
 export const H2 = styled.h2`
     color: white;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;

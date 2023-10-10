@@ -12,6 +12,7 @@ export const Botao = styled.div`
     position: absolute;
     font-weight: bold; 
     color: white;
+    display: flex;
 `
 
 export const ConteudoModal = styled.div`

@@ -20,12 +20,10 @@ function Home(){
        <>
         <Header/>
 
-        <ContainerHome>
+        <ContainerButton>
             <button className="icone" onClick={goToAcFisico}> <img src={iconeAcFisico} alt="acompanhamento fisico"/></button>
             <button className="compartilhar"><Compartilhar/></button>
-
-            
-        </ContainerHome>
+        </ContainerButton> 
         <SecoesHome>
             <MensagemDefault>
                 <h3>SEM TREINOS REGISTRADOS: compartilhe essa secao com seu treinador ou insira sua rotina de treinos voce mesmo</h3>

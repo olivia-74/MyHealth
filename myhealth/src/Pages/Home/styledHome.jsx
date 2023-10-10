@@ -10,13 +10,12 @@ export const ContainerHome = styled.div`
     outline: 0;
     box-sizing: border-box;
     background-color: #F5F1F0;
-    justify-items: center;
+    justify-content: space-evenly;
     display: flex;
-    justify-content: center;
+   
 
     button{
         display: flex;
-        justify-content: space-between;
 
         &.icone{
             float: left;
@@ -26,7 +25,6 @@ export const ContainerHome = styled.div`
             width: 38px;
             padding: 5px;
             margin-top: 4vh;
-            margin-left: -10vw;
 
             img{
                 background-color: transparent;
@@ -35,7 +33,7 @@ export const ContainerHome = styled.div`
 
         &.compartilhar{
             float: right;
-            width: fit-content;
+            width: 5vw;
         }
 
     }
